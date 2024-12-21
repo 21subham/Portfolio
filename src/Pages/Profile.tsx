@@ -157,12 +157,10 @@ const ProfileSection = () => {
 
           {/* Social Links and Buttons */}
           <div className="col-span-1 flex flex-col justify-center items-center space-y-4">
-            <a
-              href="#"
-              className="bg-primary text-white px-6 py-2 rounded-lg shadow-md hover:bg-secondary transition duration-300"
-            >
+            {/* resume downloadable banaunu paryo */}
+            <button className="bg-primary text-white px-6 py-2 rounded-lg shadow-md hover:bg-secondary transition duration-300">
               Resume
-            </a>
+            </button>
             <div className="flex space-x-4">
               {socialLinks.map((link, index) => (
                 <a

@@ -24,9 +24,9 @@ const About = () => {
             <span className="text-yellow-400">About</span> Me
           </h1>
 
-          <h2 className="text-3xl font-bold text-text">
+          {/* <h2 className="text-3xl font-bold text-text">
             Insert a Catchy line here later ig!!
-          </h2>
+          </h2> */}
           <p className="text-lg text-text">
             Aiming to develop a skill set as a{" "}
             <span className="text-yellow-400">fullstack web developer!</span>

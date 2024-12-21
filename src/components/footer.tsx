@@ -10,8 +10,8 @@ function Footer() {
           Thank You for Visiting
         </h2>
         <p className="text-gray-500">
-          We appreciate your interest in our work. Stay connected with us on
-          social media or contact us for inquiries.
+          I appreciate your interest in mu work. Stay connected with me on
+          social media or contact me for inquiries.
         </p>
       </div>
 
