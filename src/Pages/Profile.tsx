@@ -21,7 +21,7 @@ const socialLinks = [
 
 const handleresume = () => {
   const link = document.createElement("a");
-  link.href = "/public/assets/Resume.pdf";
+  link.href = "/assets/Resume.pdf";
   link.download = "Subham_Rajbhandari_Resume.pdf";
   if (typeof link.download === "undefined") {
     window.open(link.href, "_blank");
