@@ -1,6 +1,5 @@
 import { useState } from "react";
 import me from "../assets/Images/Me.jpg";
-import resume from "../assets/Resume.pdf";
 
 const socialLinks = [
   {
@@ -22,7 +21,7 @@ const socialLinks = [
 
 const handleresume = () => {
   const link = document.createElement("a");
-  link.href = resume;
+  link.href = "/src/assets/Resume.pdf";
   const name = "Subham Rajbhandari Resume";
   link.download = name;
   document.body.appendChild(link);
