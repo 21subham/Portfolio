@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* src/index.css */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  --text: #091010;
+  --background: #f3f9f9;
+  --primary: #58afae;
+  --secondary: #a5d7d6;
+  --tertiary: #7ac9c7;
+}
+
+.dark-mode {
+  --text: #eff6f6;
+  --background: #070e0e;
+  --primary: #06768d;
+  --secondary: #026a81;
+  --tertiary: #046276;
+}
+
+
+.social-link {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  padding: 10px;}
+  
+/* ... */
+
+.social-link:hover{
+  transform: scale(1.1);
+  
+}
+
+.glow-text {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+  transition: text-shadow 0.3s ease-in-out;
+}
