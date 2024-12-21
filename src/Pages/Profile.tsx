@@ -21,12 +21,15 @@ const socialLinks = [
 
 const handleresume = () => {
   const link = document.createElement("a");
-  link.href = "/src/assets/Resume.pdf";
-  const name = "Subham Rajbhandari Resume";
-  link.download = name;
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+  link.href = "/assets/Resume.pdf";
+  link.download = "Subham_Rajbhandari_Resume.pdf";
+  if (typeof link.download === "undefined") {
+    window.open(link.href, "_blank");
+  } else {
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 };
 const ProfileSection = () => {
   const [isSwapped, setIsSwapped] = useState(false);
