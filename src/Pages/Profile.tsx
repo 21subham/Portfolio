@@ -23,7 +23,8 @@ const socialLinks = [
 const handleresume = () => {
   const link = document.createElement("a");
   link.href = resume;
-  link.download = "Subham Rajbhandari Resume";
+  const name = "Subham Rajbhandari Resume";
+  link.download = name;
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
