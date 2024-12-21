@@ -1,5 +1,6 @@
 import { useState } from "react";
 import me from "../assets/Images/Me.jpg";
+import resume from "../assets/Resume.pdf";
 
 const socialLinks = [
   {
@@ -19,6 +20,14 @@ const socialLinks = [
   },
 ];
 
+const handleresume = () => {
+  const link = document.createElement("a");
+  link.href = resume;
+  link.download = "Subham Rajbhandari Resume";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 const ProfileSection = () => {
   const [isSwapped, setIsSwapped] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -157,8 +166,10 @@ const ProfileSection = () => {
 
           {/* Social Links and Buttons */}
           <div className="col-span-1 flex flex-col justify-center items-center space-y-4">
-            {/* resume downloadable banaunu paryo */}
-            <button className="bg-primary text-white px-6 py-2 rounded-lg shadow-md hover:bg-secondary transition duration-300">
+            <button
+              onClick={handleresume}
+              className="bg-primary text-white px-6 py-2 rounded-lg shadow-md hover:bg-secondary transition duration-300"
+            >
               Resume
             </button>
             <div className="flex space-x-4">
