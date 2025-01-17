@@ -169,7 +169,7 @@ const ProfileSection = () => {
           </div>
 
           {/* Social Links and Buttons */}
-          <div className="col-span-1 flex flex-col justify-center items-center space-y-4">
+          <div className="col-span-1 flex flex-col justify-center items-center space-y-4  ">
             <button
               onClick={handleresume}
               className="bg-primary text-white px-6 py-2 rounded-lg shadow-md hover:bg-secondary transition duration-300"

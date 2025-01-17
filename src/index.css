@@ -24,19 +24,19 @@ body {
   --tertiary: #046276;
 }
 
-
 .social-link {
   box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-  padding: 10px;}
-  
+  padding: 10px;
+}
+
 /* ... */
 
-.social-link:hover{
+.social-link:hover {
   transform: scale(1.1);
-  
 }
 
 .glow-text {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+    0 0 20px rgba(255, 255, 255, 0.5);
   transition: text-shadow 0.3s ease-in-out;
 }
