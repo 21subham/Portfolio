@@ -1,11 +1,8 @@
-import useImageViewer from "../hooks/useImageViewer";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
-import blog from "../assets/Images/blog.jpg";
+import trend from "../assets/Images/Trendbazaar.png";
 import anon from "../assets/Images/anon.jpg";
 
 const Projects = () => {
-  const { selectedImage, openViewer, closeViewer } = useImageViewer();
-
   const isInView = useIntersectionObserver("startPoint1", { threshold: 0.5 });
 
   const projects = [
@@ -14,7 +11,8 @@ const Projects = () => {
       description: `
       A blog site with features such as login and signup made with Reactjs, redux and Appwrite. 
     `,
-      gif: blog,
+      gif: trend,
+      link: "https://trendbazaar-three.vercel.app/",
     },
     {
       title: "Anon Message",
@@ -22,6 +20,7 @@ const Projects = () => {
      A message sharing platform where users can share messages anonymously with signup/login, OTP verification and AI message suggestions. Created using Nextjs, NExtauth,GEMINI AI api, ResendEmail, MongoDB, REST apis .
     `,
       gif: anon,
+      link: "https://learnnext-mocha.vercel.app/",
     },
   ];
 
@@ -39,7 +38,7 @@ const Projects = () => {
           <div
             key={index}
             className="project bg-tertiary p-4 rounded-lg cursor-pointer"
-            onClick={() => openViewer(project.gif)}
+            onClick={() => (window.location.href = project.link)}
           >
             <img
               src={project.gif}
@@ -51,22 +50,6 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      {selectedImage && (
-        <div
-          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50"
-          onClick={closeViewer}
-        >
-          <img
-            src={selectedImage}
-            alt="Selected Project"
-            className={`max-w-full max-h-screen object-contain transform transition-all duration-300 `}
-            style={{
-              maxWidth: "90%",
-              maxHeight: "90%",
-            }}
-          />
-        </div>
-      )}
     </div>
   );
 };
