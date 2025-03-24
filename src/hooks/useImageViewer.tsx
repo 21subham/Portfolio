@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 
 const useImageViewer = () => {
@@ -11,7 +12,7 @@ const useImageViewer = () => {
 
   const closeViewer = () => {
     setIsAnimating(false); // fade-out
-    setTimeout(() => setSelectedImage(null), 300); // Delay
+    setTimeout(() => setSelectedImage(null), 300); // Delay 
   };
 
   return { selectedImage, isAnimating, openViewer, closeViewer };

@@ -1,9 +1,10 @@
+import type React from "react";
 // src/Pages/Home.tsx
 
-import Profile from "./Profile";
+import Profile from "./HeroSection";
 import About from "../components/About";
 import Skills from "../components/skillSection";
-// import Gallery from "../components/Gallery";
+import ProfessionalExperience from "./ProfessionalExperience";
 import Projects from "./DisplayProject";
 
 import {
@@ -14,10 +15,14 @@ import {
   FaJs,
   FaGitAlt,
 } from "react-icons/fa";
-import { SiTailwindcss, SiTypescript } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiUnity,
+  SiTypescript,
+  SiNextdotjs,
+  SiMongodb,
+} from "react-icons/si";
 import withLayout from "../hoc/withLayout";
-
-import { RiNextjsFill } from "react-icons/ri";
 
 const Home: React.FC = () => {
   const skills = [
@@ -42,8 +47,12 @@ const Home: React.FC = () => {
       name: "React",
     },
     {
-      icon: <RiNextjsFill size={24} />,
-      name: "Nextjs",
+      icon: <SiNextdotjs size={24} />,
+      name: "Next.js",
+    },
+    {
+      icon: <SiMongodb size={24} />,
+      name: "MongoDB",
     },
     {
       icon: <FaJs size={24} />,
@@ -64,7 +73,7 @@ const Home: React.FC = () => {
       <Profile />
       <About />
       <Skills skills={skills} />
-      {/* <Gallery /> */}
+      <ProfessionalExperience />
       <Projects />
     </>
   );

@@ -1,56 +1,75 @@
+import useImageViewer from "../hooks/useImageViewer";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
-import trend from "../assets/Images/Trendbazaar.png";
-import anon from "../assets/Images/anon.jpg";
+import bs from "../assets/Images/blog.jpg";
+import tb from "../assets/Images/TrendBazaar.png";
 
 const Projects = () => {
+  const { selectedImage, openViewer, closeViewer } = useImageViewer();
   const isInView = useIntersectionObserver("startPoint1", { threshold: 0.5 });
 
   const projects = [
     {
-      title: "Blog Site",
-      description: `
-      A blog site with features such as login and signup made with Reactjs, redux and Appwrite. 
-    `,
-      gif: trend,
-      link: "https://trendbazaar-three.vercel.app/",
+      title: "TrendBazaar",
+      description: `A modern and responsive Ecommerce app using sanity, clerk, tailwindCSS and stripe.`,
+      gif: tb,
     },
     {
-      title: "Anon Message",
-      description: `
-     A message sharing platform where users can share messages anonymously with signup/login, OTP verification and AI message suggestions. Created using Nextjs, NExtauth,GEMINI AI api, ResendEmail, MongoDB, REST apis .
-    `,
-      gif: anon,
-      link: "https://learnnext-mocha.vercel.app/",
+      title: "Blog Site",
+      description: `A blog app that allows users to create and publish blog posts.`,
+      gif: bs,
     },
   ];
 
   return (
-    <div className={`projects flex flex-col items-center p-8`}>
-      <h2 id="startPoint1" className="text-2xl text-text font-bold mb-8">
-        Recent Projects
+    <section
+      id="startPoint1"
+      className="flex flex-col items-center px-6 lg:px-12 py-16 space-y-6"
+    >
+      <h2 className="text-3xl lg:text-4xl font-bold text-text">
+        My Recent Projects
       </h2>
       <div
-        className={`grid grid-cols-2 gap-4 ${
-          isInView ? "animate-pop-out" : ""
+        className={`grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl ${
+          isInView ? "animate-fade-in" : ""
         }`}
       >
         {projects.map((project, index) => (
           <div
             key={index}
-            className="project bg-tertiary p-4 rounded-lg cursor-pointer"
-            onClick={() => (window.location.href = project.link)}
+            className="relative bg-card border border-border rounded-xl shadow-md transition-transform hover:scale-105 cursor-pointer"
+            onClick={() => openViewer(project.gif)}
           >
+            {/* Project Image - Ensuring it doesn't crop */}
             <img
               src={project.gif}
               alt={project.title}
-              className="w-full h-auto"
+              className="w-full h-auto rounded-t-xl"
             />
-            <h3 className="text-lg text-text font-bold">{project.title}</h3>
-            <p className="text-sm text-text">{project.description}</p>
+
+            {/* Overlay Card Description */}
+            <div className="bg-background p-4 rounded-b-xl border-t border-border">
+              <h3 className="text-lg font-bold text-white">{project.title}</h3>
+              <p className="text-sm text-gray-300">{project.description}</p>
+            </div>
           </div>
         ))}
       </div>
-    </div>
+
+      {/* Fullscreen Image Viewer */}
+      {selectedImage && (
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50"
+          onClick={closeViewer}
+        >
+          <img
+            src={selectedImage}
+            alt="Selected Project"
+            className="max-w-full max-h-screen object-contain transition-transform duration-300"
+            style={{ maxWidth: "90%", maxHeight: "90%" }}
+          />
+        </div>
+      )}
+    </section>
   );
 };
 

@@ -4,7 +4,7 @@ import { DarkModeContext } from "./context/darkModeContext";
 import ScrollToTop from "./components/UI/ScrollToTop";
 import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
-
+import Projects from "./Pages/Projects";
 import { DarkModeProvider } from "./context/darkModeContext";
 
 function AppContent() {
@@ -16,6 +16,7 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route path="/Projects" element={<Projects />} />
         </Routes>
         <ScrollToTop />
       </div>
