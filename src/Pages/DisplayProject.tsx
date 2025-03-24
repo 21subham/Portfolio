@@ -1,7 +1,7 @@
 import useImageViewer from "../hooks/useImageViewer";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import bs from "../assets/Images/blog.jpg";
-import tb from "../assets/Images/TrendBazaar.png";
+import tb from "../assets/Images/Trendbazaar.png";
 
 const Projects = () => {
   const { selectedImage, openViewer, closeViewer } = useImageViewer();
