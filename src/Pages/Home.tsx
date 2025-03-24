@@ -17,7 +17,6 @@ import {
 } from "react-icons/fa";
 import {
   SiTailwindcss,
-  SiUnity,
   SiTypescript,
   SiNextdotjs,
   SiMongodb,
