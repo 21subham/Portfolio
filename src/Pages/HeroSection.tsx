@@ -29,7 +29,7 @@ const ProfileSection = () => {
   const handleresume = () => {
     const link = document.createElement("a");
     //mobile download ko lagi public folder ma hunu parxa .  localhost/assets/Resume.pdf ni garna milyo
-    link.href = "/assets/Resume.pdf";
+    link.href = "/Resume.pdf";
     link.download = "Subham_Rajbhandari_Resume.pdf";
 
     if (typeof link.download === "undefined") {
