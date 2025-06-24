@@ -26,19 +26,15 @@ const ProfileSection = () => {
     return () => clearTimeout(timer);
   }, [text, index]);
 
-  const handleresume = () => {
+  const handleResume = () => {
     const link = document.createElement("a");
     //mobile download ko lagi public folder ma hunu parxa .  localhost/assets/Resume.pdf ni garna milyo
     link.href = "/Resume.pdf";
     link.download = "Subham_Rajbhandari_Resume.pdf";
 
-    if (typeof link.download === "undefined") {
-      window.open(link.href, "_blank");
-    } else {
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -89,7 +85,7 @@ const ProfileSection = () => {
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <button
-                onClick={handleresume}
+                onClick={handleResume}
                 className="px-6 py-3 bg-primary text-text font-medium rounded-lg hover:bg-primary/90 transition-colors inline-block"
               >
                 Download Resume
