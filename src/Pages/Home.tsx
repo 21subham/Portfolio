@@ -20,6 +20,8 @@ import {
   SiTypescript,
   SiNextdotjs,
   SiMongodb,
+  SiWordpress,
+  SiDocker,
 } from "react-icons/si";
 import withLayout from "../hoc/withLayout";
 
@@ -64,6 +66,14 @@ const Home: React.FC = () => {
     {
       icon: <SiTypescript size={24} />,
       name: "Typescript",
+    },
+    {
+      icon: <SiWordpress size={24} />,
+      name: "Wordpress",
+    },
+    {
+      icon: <SiDocker size={24} />,
+      name: "Docker",
     },
   ];
 
