@@ -1,6 +1,6 @@
 import useImageViewer from "../hooks/useImageViewer";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
-import bs from "../assets/Images/blog.jpg";
+import kl from "../assets/Images/ktmliv.jpg";
 import tb from "../assets/Images/Trendbazaar.png";
 
 const Projects = () => {
@@ -14,9 +14,9 @@ const Projects = () => {
       gif: tb,
     },
     {
-      title: "Blog Site",
-      description: `A blog app that allows users to create and publish blog posts.`,
-      gif: bs,
+      title: "Kathmandu Living",
+      description: `A live website to host and find apartments in ktm valley`,
+      gif: kl,
     },
   ];
 

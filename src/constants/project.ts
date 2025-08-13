@@ -47,4 +47,12 @@ export const PROJECTS = [
     `,
     link: "https://github.com/21subham/Portfolio",
   },
+  {
+    id: "project-7",
+    title: "Kathmandu Living",
+    description: `
+     A live WordPress website designed to help users easily find and rent apartments across the Kathmandu Valley.
+    `,
+    link: "https://www.kathmanduliving.com/",
+  },
 ];
